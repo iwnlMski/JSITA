@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'C:/Users/Mski/Django/JSITAnalist/JSITA/mainapp/static'
+
+STATICFILES_DIRS = (
+    Path.joinpath(BASE_DIR, 'static'),
+)
+
+STATICFILES_FINDERS = (
+    'compressor.finders.CompressorFinder',
+)
