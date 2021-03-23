@@ -12,7 +12,7 @@ html {
 }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: #4e657a;
+  background-color: rgb(36, 36, 36);
   overflow-x: hidden;
 }
 a {
@@ -41,7 +41,7 @@ button:focus {
 }
 .navbar {
   height: 100px;
-  background-color: #567086;
+  background-color: rgba(16, 15, 16, .8);
   padding: 0;
 }
 .navbar .container {
@@ -64,12 +64,13 @@ button:focus {
 }
 .tm-block {
   padding: 40px;
-  -webkit-box-shadow: 1px 1px 5px 0 #455c71;
-  -moz-box-shadow: 1px 1px 5px 0 #455c71;
-  box-shadow: 1px 1px 5px 0 #455c71;
+  -webkit-box-shadow: 1px 1px 5px 0 #8739F9;
+  -moz-box-shadow: 1px 1px 5px 0 #8739F9;
+  box-shadow: 1px 1px 5px 0 #8739F9;
   min-height: 350px;
   height: 100%;
   max-height: 450px;
+  border-radius: 15px;
 }
 .tm-block-avatar,
 .tm-block-settings {
@@ -116,7 +117,7 @@ button:focus {
 .dropdown-menu {
   font-size: 90%;
   color: #fff;
-  background-color: #567086;
+  background-color: #8739F9;
   border-radius: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -128,7 +129,7 @@ button:focus {
 }
 .navbar-nav .active > .nav-link,
 .navbar-nav .nav-link.active {
-  background-color: #f5a623;
+  background-color: rgba(135, 57, 249, .8);
   color: #fff;
 }
 .navbar-nav .nav-link.active i {
@@ -136,11 +137,11 @@ button:focus {
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-  background-color: #567086;
+  background-color: rgba(135, 57, 249, .8);
 }
 .navbar-nav a:hover,
 .navbar-nav a:hover i {
-  color: #f5a623;
+  color: rgba(135, 57, 249, .8);
 }
 .nav-item {
   text-align: center;
@@ -184,7 +185,7 @@ button:focus {
 }
 .tm-notification-item {
   padding: 15px;
-  background-color: #4e657a;
+  background-color: #1B1B1B;
   color: #fff;
   font-size: 95%;
   margin-bottom: 15px;
@@ -193,7 +194,7 @@ button:focus {
   margin-bottom: 0;
 }
 .tm-notification-link {
-  color: #f5a623;
+  color: #8739F9;
 }
 .tm-text-color-secondary {
   color: #bdcbd8;
@@ -202,13 +203,13 @@ button:focus {
   font-size: 90%;
 }
 .table {
-  background-color: #50697f;
+  background-color: #1B1B1B;
   color: #fff;
   font-size: 85%;
   margin-bottom: 0;
 }
 thead {
-  background-color: #486177;
+  background-color: rgba(16, 15, 16, 0.5);
   color: #fff;
 }
 .table thead th {
@@ -278,15 +279,15 @@ thead {
   padding-right: 15px;
 }
 .form-control {
-  background-color: #54657d;
+  background-color: #242424;
   color: #fff;
   border: 0;
 }
 .form-control:focus {
-  background-color: #60738e;
+  background-color: #242424;
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
+  box-shadow: 0 0 0 0.1rem #8739F9;
 }
 .form-group label {
   color: #fff;
@@ -339,16 +340,16 @@ thead {
 }
 .btn-primary {
   color: #fff;
-  background-color: #f5a623;
-  border: 2px solid #f5a623;
+  background-color: rgba(135, 57, 249, .8);
+  border: 2px solid rgba(135, 57, 249, .8);
   font-size: 90%;
   font-weight: 600;
 }
 .btn-primary:active,
 .btn-primary:hover {
-  color: #f5a623;
+  color: rgba(135, 57, 249, .8);
   background-color: transparent;
-  border: 2px solid #f5a623;
+  border: 2px solid rgba(135, 57, 249, .8);
 }
 .custom-file-input {
   cursor: pointer;
@@ -358,7 +359,7 @@ thead {
 }
 .table td,
 .table th {
-  border-top: 1px solid #415a70;
+  border-top: 1px solid #8739F9;
   padding: 15px 25px;
   vertical-align: middle;
 }
@@ -371,10 +372,10 @@ thead {
   transition: all 0.2s ease;
 }
 .table-hover tbody tr:hover {
-  color: #a0c0de;
+  color: rgba(123, 44, 191, .8);
 }
 .tm-bg-primary-dark {
-  background-color: #435c70;
+  background-color: #1B1B1B;
 }
 .tm-bg-gray {
   background-color: rgba(0, 0, 0, 0.05);
@@ -412,7 +413,7 @@ input[type="checkbox"] {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #394e64;
+  background-color: rgba(157, 78, 221, 0.5);
   background-position: center;
   border-radius: 50%;
   box-sizing: border-box;
@@ -423,7 +424,7 @@ input[type="checkbox"] {
   transition: all 0.1s linear;
 }
 input[type="checkbox"]:checked {
-  background: url(../img/check-mark.png) #394e64 center no-repeat;
+  background: url(../img/check-mark.png) rgba(157, 78, 221, 0.5) center no-repeat;
 }
 input[type="checkbox"]:focus {
   outline: 0 none;
@@ -454,19 +455,19 @@ input[type="checkbox"]:focus {
 .tm-product-delete-link {
   padding: 10px;
   border-radius: 50%;
-  background-color: #394e64;
+  background-color: rgba(135, 57, 249, .8);
   display: inline-block;
   width: 40px;
   height: 40px;
   text-align: center;
 }
 .tm-product-delete-link:hover .tm-product-delete-icon {
-  color: #6d8ca6;
+  color: #1B1B1B;
 }
 .custom-select {
   width: 100%;
   border: none;
-  color: #acc6de;
+  color: #fff;
   height: 50px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -479,7 +480,7 @@ input[type="checkbox"]:focus {
   -o-border-radius: 0;
   border-radius: 0;
   padding: 15px;
-  background: url(../img/arrow-down.png) 98% no-repeat #50657b;
+  background: url(../img/arrow-down.png) 98% no-repeat #242424;
 }
 .custom-select:focus {
   outline: 0;
@@ -492,12 +493,12 @@ input[type="checkbox"]:focus {
   color: #9f1321;
 }
 .tm-footer {
-  background-color: #567086;
+  background-color: #100F10;
   padding-top: 30px;
   padding-bottom: 30px;
-  -webkit-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
-  -moz-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
-  box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
+  -webkit-box-shadow: 0 -3px 5px 0 #8739F9;
+  -moz-box-shadow: 0 -3px 5px 0 #8739F9;
+  box-shadow: 0 -3px 5px 0 #8739F9;
 }
 .custom-select {
   height: 50px;
@@ -536,34 +537,38 @@ input[type="checkbox"]:focus {
   max-width: 470px;
 }
 .navbar-toggler {
-  border-color: #708da8;
-  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 2px;
+  border-color: #8739F9;
+  box-shadow: #8739F9 0 1px 1px 2px;
   border-radius: 0;
   padding: 10px 15px;
   transition: all 0.2s ease;
 }
 .navbar-toggler:hover {
-  border-color: #f5a623;
-  color: #f5a623;
+  border-color: #8739F9;
+  color: #8739F9;
 }
 .tm-nav-icon {
   color: #fff;
 }
 .navbar-toggler:hover .tm-nav-icon {
-  color: #f5a623;
+  color: #8739F9;
 }
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
+  border-radius: 15px;
 }
 ::-webkit-scrollbar-track {
-  background: #394f62;
+  background: #1B1B1B;
+  border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6d8da6;
+  background: #8739F9;
+  border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8ab5d6;
+  background: #8739F9;
+  border-radius: 15px;
 }
 
 .tm-footer-link {
@@ -572,7 +577,7 @@ input[type="checkbox"]:focus {
 
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-  color: #aacbea;
+  color: #8739F9;
 }
 
 @media (min-width: 1200px) {
@@ -618,7 +623,7 @@ input[type="checkbox"]:focus {
   }
   .nav-link {
     color: #fff;
-    background-color: #567086;
+    background-color: #8739F9;
     padding: 15px;
     flex-direction: row;
   }
