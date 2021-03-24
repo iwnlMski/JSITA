@@ -37,7 +37,7 @@ function drawLineChart() {
             label: "Latest Hits",
             data: [88, 68, 79, 57, 50, 55, 70],
             fill: false,
-            borderColor: "rgb(75, 192, 192)",
+            borderColor: "#7f43b3",
             cubicInterpolationMode: "monotone",
             pointRadius: 0
           },
@@ -45,7 +45,7 @@ function drawLineChart() {
             label: "Popular Hits",
             data: [33, 45, 37, 21, 55, 74, 69],
             fill: false,
-            borderColor: "rgba(255,99,132,1)",
+            borderColor: "#68309b",
             cubicInterpolationMode: "monotone",
             pointRadius: 0
           },
@@ -53,7 +53,7 @@ function drawLineChart() {
             label: "Featured",
             data: [44, 19, 38, 46, 85, 66, 79],
             fill: false,
-            borderColor: "rgba(153, 102, 255, 1)",
+            borderColor: "#521d83",
             cubicInterpolationMode: "monotone",
             pointRadius: 0
           }
@@ -111,13 +111,13 @@ function drawBarChart() {
             label: "# of Hits",
             data: [33, 40, 28, 49, 58, 38, 44],
             backgroundColor: [
-              "#F7604D",
-              "#4ED6B8",
-              "#A8D582",
-              "#D7D768",
-              "#9D66CC",
-              "#DB9C3F",
-              "#3889FC"
+              '#c77dff',
+              '#af69e5',
+              '#9756cc',
+              '#7f43b3',
+              '#68309b',
+              '#521d83',
+              '#3c096c'
             ],
             borderWidth: 0
           }
@@ -152,6 +152,7 @@ function drawPieChart() {
       legend: {
         position: "top"
       }
+
     };
 
     configPie = {
@@ -160,8 +161,9 @@ function drawPieChart() {
         datasets: [
           {
             data: [18.24, 6.5, 9.15],
-            backgroundColor: ["#F7604D", "#4ED6B8", "#A8D582"],
-            label: "Storage"
+            backgroundColor: ["#68309b", "#521d83", "#3c096c"],
+            label: "Storage",
+            borderColor: '#fff'
           }
         ],
         labels: [
@@ -188,5 +190,12 @@ function updateBarChart() {
   if (barChart) {
     barChart.options = optionsBar;
     barChart.update();
+  }
+}
+
+function updatePieChart() {
+  if (pieChart) {
+    pieChart.options = optionsPie;
+    pieChart.update();
   }
 }
