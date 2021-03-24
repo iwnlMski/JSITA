@@ -19,10 +19,12 @@ def generate_offers_from_response(response):
         yield offer + '</entry>'
 
 
-def get_skillset_from_url(url, driver):
+def get_skill_and_exp_from_url(url, driver):
     driver.get(url)
     skill_set_soup = BeautifulSoup(driver.page_source, 'html.parser')
-    return [x['title'] for x in skill_set_soup.find_all(attrs={'class': 'css-1xm32e0'})]
+    skills_list = [x['title'] for x in skill_set_soup.find_all(attrs={'class': 'css-1xm32e0'})]
+    experience = skill_set_soup.find_all(attrs={'class': 'css-1ji7bvd'})[1].text
+    return {'skills': skills_list, 'exp': experience}
 
 
 def limit_update_check():
@@ -36,8 +38,9 @@ def update_database_with_offers(splitted_response, driver):
         soup = BeautifulSoup(offer, 'html.parser')
         if offer_not_id_db(soup.entry.id.text.strip()):
             summary_soup = BeautifulSoup(soup.summary.text, 'html.parser')
-            skills = get_skillset_from_url(soup.entry.id.text.strip(), driver)
-            skills = ', '.join(skills)
+            skills_exp_dict = get_skill_and_exp_from_url(soup.entry.id.text.strip(), driver)
+            skills = ', '.join(skills_exp_dict['skills'])
+            exp = skills_exp_dict['exp']
             data = {
                 'url': soup.entry.id.text.strip(),
                 'name': soup.entry.title.text.strip(),
@@ -45,8 +48,8 @@ def update_database_with_offers(splitted_response, driver):
                 'company': soup.entry.author.text.strip(),
                 'salary': summary_soup.p.text.strip().splitlines()[0],
                 'skills': skills,
-                #'date': date,
-                #'exp': exp,
+                'date': soup.entry.updated.text,
+                'exp': exp,
             }
             add_to_db(data)
         else:
